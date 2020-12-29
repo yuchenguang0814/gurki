@@ -53,6 +53,7 @@ header nav ul {
   display:flex;
   margin-bottom: 0;
   z-index: 10;
+  height: 80px;
 }
 header nav ul li {
   position: relative;
