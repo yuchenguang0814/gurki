@@ -1,0 +1,68 @@
+@import "./normalize.css";
+
+/*:root -> 获取根元素html*/
+:root {
+  --color-text: #333;
+  --color-high-text: #fd6e27;
+  --color-theme: #007aff;
+  --color-background: #fff;
+  --font-size: 16px;
+  --line-height: 1.5;
+  --text-align: justify;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: var(--font-size) / var(--line-height) "Microsoft YaHei", arial, 宋体, sans-serif;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  user-select: none; /* 禁止用户鼠标在页面上选中文字/图片等 */
+  -webkit-tap-highlight-color: transparent; /* webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节 */
+  background: var(--color-background);
+  color: var(--color-text);
+  text-align: var(--text-align);
+  height: 100%;
+}
+img {
+  vertical-align: middle;
+}
+a{
+  text-decoration:none;
+}
+a:visited{
+  color:var(--color-text);
+}
+a:hover{
+  color:var(--color-high-text);
+}
+a:active{
+  color:#fff;
+}
+a:link{
+  color:var(--color-text);
+}
+.clear-fix::after {
+  clear: both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.clear-fix {
+  zoom: 1;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}

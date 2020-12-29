@@ -1,0 +1,69 @@
+/* 顶部导航 */
+header {
+  margin: 0 auto;
+  position: relative;
+}
+header .top {
+  padding: 3px 10px;
+}
+header .top .topLeft span{
+  font-size: 0.75em;
+  color: rgb(0, 0, 0);
+}
+
+header .top .row {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+header .top .topRight P{
+  text-align: right;
+}
+header .top .topRight P{
+  text-align: right;
+}
+header .top .topRight P span:first-child{
+  font-size: 0.75em;
+  color: rgb(127, 127, 127);
+  line-height: 150%;
+}
+header .top .topRight P span:last-child{
+  color: rgb(255, 114, 0);
+}
+header .top .topRight strong{
+  font-size: 1.25em;
+  font-weight: 700;
+}
+header .bottom {
+  max-width: 1350px;
+}
+header .bottom .logo {
+  padding-top: 10px;
+}
+header .bottom .logo img {
+  max-width: 270px;
+  display: block;
+  position: static;
+  width: 100%;
+  height: auto;
+}
+header nav {
+  text-align: left;
+}
+header nav ul {
+  display:flex;
+  margin-bottom: 0;
+}
+header nav ul li {
+  padding: 20px 0;
+  flex: 1;
+  height: 80px;
+  cursor: pointer;
+  text-align: center;
+}
+header nav ul li.active a {
+  color:var(--color-high-text);
+}
+header nav ul li a:hover {
+  text-decoration: none;
+  color:var(--color-high-text);
+}

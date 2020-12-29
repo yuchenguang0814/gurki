@@ -1,0 +1,128 @@
+/* Animations */
+@-moz-keyframes imageAnimationFallDown { 
+	to { opacity: 0; -moz-transform: translateY(70%); }
+}
+
+@-o-keyframes imageAnimationFallDown { 
+	to { opacity: 0; -o-transform: translateY(70%); }
+}
+
+@-webkit-keyframes imageAnimationFallDown { 
+	to { opacity: 0; -webkit-transform: translateY(70%); }
+}
+
+@keyframes imageAnimationFallDown { 
+	to { opacity: 0; transform: translateY(70%); }
+}
+
+@-moz-keyframes imageAnimationScaleUpFadeIn { 
+	from { opacity: 0; -moz-transform: scale(0.8); }
+	to { visibility: visible; opacity: 1; -moz-transform: scale(1); }
+}
+
+@-o-keyframes imageAnimationScaleUpFadeIn { 
+	from { opacity: 0; -o-transform: scale(0.8); }
+	to { visibility: visible; opacity: 1; -o-transform: scale(1); }
+}
+
+@-webkit-keyframes imageAnimationScaleUpFadeIn { 
+	from { opacity: 0; -webkit-transform: scale(0.8); }
+	to { visibility: visible; opacity: 1; -webkit-transform: scale(1); }
+}
+
+@keyframes imageAnimationScaleUpFadeIn { 
+	from { opacity: 0; transform: scale(0.8); }
+	to { visibility: visible; opacity: 1; transform: scale(1); }
+}
+
+.image-animate.new-carousel-1 {
+	opacity: 0;
+	-moz-animation: imageAnimationScaleUpFadeIn 1s forwards;
+	-o-animation: imageAnimationScaleUpFadeIn 1s forwards;
+	-webkit-animation: imageAnimationScaleUpFadeIn 1s forwards;
+	animation: imageAnimationScaleUpFadeIn 1s forwards;
+}
+.image-animate.old-carousel-1 {
+	opacity: 1;
+	-moz-animation: imageAnimationFallDown 1s forwards;
+	-o-animation: imageAnimationFallDown 1s forwards;
+	-webkit-animation: imageAnimationFallDown 1s forwards;
+	animation: imageAnimationFallDown 1s forwards;
+}
+.image-animate.new-carousel-2 {
+	opacity: 0;
+	-moz-animation: imageAnimationScaleUpFadeIn 2s forwards;
+	-o-animation: imageAnimationScaleUpFadeIn 2s forwards;
+	-webkit-animation: imageAnimationScaleUpFadeIn 2s forwards;
+	animation: imageAnimationScaleUpFadeIn 2s forwards;
+}
+.image-animate.old-carousel-2 {
+	opacity: 1;
+	-moz-animation: imageAnimationFallDown 2s forwards;
+	-o-animation: imageAnimationFallDown 2s forwards;
+	-webkit-animation: imageAnimationFallDown 2s forwards;
+	animation: imageAnimationFallDown 2s forwards;
+}
+.image-animate.old-carousel-3 {
+	opacity: 1;
+	-moz-animation: imageAnimationFallDown 3s forwards;
+	-o-animation: imageAnimationFallDown 3s forwards;
+	-webkit-animation: imageAnimationFallDown 3s forwards;
+	animation: imageAnimationFallDown 3s forwards;
+}
+.image-animate.new-carousel-3 {
+	opacity: 0;
+	-moz-animation: imageAnimationScaleUpFadeIn 3s forwards;
+	-o-animation: imageAnimationScaleUpFadeIn 3s forwards;
+	-webkit-animation: imageAnimationScaleUpFadeIn 3s forwards;
+	animation: imageAnimationScaleUpFadeIn 3s forwards;
+}
+.image-animate.new-carousel-4 {
+	opacity: 0;
+	-moz-animation: imageAnimationScaleUpFadeIn 4s forwards;
+	-o-animation: imageAnimationScaleUpFadeIn 4s forwards;
+	-webkit-animation: imageAnimationScaleUpFadeIn 4s forwards;
+	animation: imageAnimationScaleUpFadeIn 4s forwards;
+}
+.image-animate.old-carousel-4 {
+	opacity: 1;
+	-moz-animation: imageAnimationFallDown 4s forwards;
+	-o-animation: imageAnimationFallDown 4s forwards;
+	-webkit-animation: imageAnimationFallDown 4s forwards;
+	animation: imageAnimationFallDown 4s forwards;
+}
+.image-animate.new-carousel-5 {
+	opacity: 0;
+	-moz-animation: imageAnimationScaleUpFadeIn 5s forwards;
+	-o-animation: imageAnimationScaleUpFadeIn 5s forwards;
+	-webkit-animation: imageAnimationScaleUpFadeIn 5s forwards;
+	animation: imageAnimationScaleUpFadeIn 5s forwards;
+}
+.image-animate.old-carousel-5 {
+	opacity: 1;
+	-moz-animation: imageAnimationFallDown 5s forwards;
+	-o-animation: imageAnimationFallDown 5s forwards;
+	-webkit-animation: imageAnimationFallDown 5s forwards;
+	animation: imageAnimationFallDown 5s forwards;
+}
+.image-animate.new-carousel-6 {
+	opacity: 0;
+	-moz-animation: imageAnimationScaleUpFadeIn 6s forwards;
+	-o-animation: imageAnimationScaleUpFadeIn 6s forwards;
+	-webkit-animation: imageAnimationScaleUpFadeIn 6s forwards;
+	animation: imageAnimationScaleUpFadeIn 6s forwards;
+}
+.image-animate.old-carousel-6 {
+	opacity: 1;
+	-moz-animation: imageAnimationFallDown 6s forwards;
+	-o-animation: imageAnimationFallDown 6s forwards;
+	-webkit-animation: imageAnimationFallDown 6s forwards;
+	animation: imageAnimationFallDown 6s forwards;
+}
+.image-animate{
+	position: absolute !important;
+	top: 0;
+	/*left: 0;*/
+	width: 100%;
+	
+}
