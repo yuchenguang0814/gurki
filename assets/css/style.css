@@ -5,6 +5,7 @@ header {
 }
 header .top {
   padding: 3px 10px;
+  background-color: rgb(248, 248, 248);
 }
 header .top .topLeft span{
   font-size: 0.75em;
@@ -37,10 +38,9 @@ header .bottom {
   max-width: 1350px;
 }
 header .bottom .logo {
-  padding-top: 10px;
+  padding-top: 30px;
 }
 header .bottom .logo img {
-  max-width: 270px;
   display: block;
   position: static;
   width: 100%;
@@ -52,18 +52,64 @@ header nav {
 header nav ul {
   display:flex;
   margin-bottom: 0;
+  z-index: 10;
 }
 header nav ul li {
-  padding: 20px 0;
+  position: relative;
   flex: 1;
-  height: 80px;
   cursor: pointer;
   text-align: center;
+  color: #fff;
+  background-color: #fff;
+}
+header nav ul li a {
+  height: 80px;
+  line-height: 80px;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  z-index: 20;
+  transition: .5s;
 }
 header nav ul li.active a {
+  background-color: rgb(248, 248, 248);
   color:var(--color-high-text);
+}
+header nav ul li:after{
+  content: '';
+  display: block;
+  margin-bottom: 0;
+  width: 0;
+  height: 80px;
+  background: rgb(248, 248, 248);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: .5s;
+}
+header nav ul li:hover::after{
+  width: 100%;
+  z-index: 1;
+  clear: both;
+}
+
+header nav ul li a:after {
+  color: #fff !important;
+  position: relative !important;
+  z-index: 100 !important;
+  position: absolute;
+  top:0;
+  left:0;
+}
+header nav ul li:hover{
+  position: relative;
 }
 header nav ul li a:hover {
   text-decoration: none;
-  color:var(--color-high-text);
+}
+header nav ul li:hover a{
+  position: relative;
+  z-index: 10;
+  color:var(--color-high-text) !important;
 }
