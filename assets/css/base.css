@@ -66,3 +66,29 @@ a:link{
 .right {
   float: right;
 }
+.line_height40 {
+  height:40px;
+  width: 100%;
+  overflow: hidden;
+}
+.display_none{
+  display:none;
+}
+.pc {
+  display: block;
+}
+.wap {
+  display: none;
+}
+
+@media (max-width:789px) {
+  .pc {
+    display: none;
+  }
+  .wap {
+    display: block;
+  }
+  .line_height40 {
+    height: 20px;
+  }
+}
