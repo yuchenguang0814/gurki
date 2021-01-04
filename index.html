@@ -28,21 +28,19 @@
   </div>
   <div class="menu wap">
     <ul class="menu-ul">
-      <li class="active"><a href="">首页</a></li>
-      <li><a href="">电商打包机</a></li>
+      <li class="active"><a href="./index.html">首页</a></li>
+      <li><a href="./products.html">电商打包机</a></li>
       <li><a href="">电商开包机</a></li>
       <li><a href="">电商封箱机</a></li>
       <li><a href="">快递贴单机</a></li>
       <li><a href="">客户案例</a></li>
       <li>
-        <a href="">新闻中心</a>
-        <div class="sub display_none">
+        <a href="javascript:void(0)" class="sub">新闻中心</a>
           <ul>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
+            <li><a href="">公司动态</a></li>
+            <li><a href="">行业新闻</a></li>
+            <li><a href="">客户案例</a></li>
           </ul>
-        </div>
       </li>
       <li><a href="">关于我们</a></li>
       <li><a href="">联系我们</a></li>
@@ -80,20 +78,18 @@
           <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
             <ul>
               <li class="active"><a href="">首页</a></li>
-              <li><a href="">电商打包机</a></li>
-              <li><a href="">电商开包机</a></li>
-              <li><a href="">电商封箱机</a></li>
-              <li><a href="">快递贴单机</a></li>
+              <li><a href="./products.html">电商打包机</a></li>
+              <li><a href="./products.html">电商开包机</a></li>
+              <li><a href="./products.html">电商封箱机</a></li>
+              <li><a href="./products.html">快递贴单机</a></li>
               <li><a href="">客户案例</a></li>
               <li>
                 <a href="">新闻中心</a>
-                <div class="sub display_none">
-                  <ul>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+                  <ul class="sub">
+                    <li><a href="">公司动态</a></li>
+                    <li><a href="">行业新闻</a></li>
+                    <li><a href="">客户案例</a></li>
                   </ul>
-                </div>
               </li>
               <li><a href="">关于我们</a></li>
               <li><a href="">联系我们</a></li>
@@ -738,83 +734,44 @@
   <!-- 手机底部导航结束 -->
   <script src="./assets/share/jquery/1.10.2/jquery.min.js"></script>
   <script src="./assets/share/Swiper/dist/js/swiper.min.js"></script>
+  <script src="./assets/js/index.js"> </script>
   <script>
-    const swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        autoplay: 3000,
-        speed: 2000,
-        slidesPerView: 1,
-        paginationClickable: true,
-        loop: true
-    });
-    $('.menu-button').click( function () {
-      if ($('.menu-button').hasClass('cross')) {
-        $(this).removeClass('cross');
-        $('.head-nav .logo').removeClass('display_none')
-        $('.menu').removeClass('active')
-      } else {
-        $(this).addClass('cross');
-        $('.head-nav .logo').addClass('display_none')
-        $('.menu').addClass('active')
-      }
-    })
-    if ($(window).width() < 789 ) {
-      $('.in-tit').addClass('animated fadeInUp')
+  //监听滚动添加动画
+  $(document).scroll(() => {
+    const scroBottom = $(window).scrollTop() + $(window).height();
+    if (scroBottom >= $('.product-container').offset().top) {
+      $('.product-container .in-tit').addClass('animated fadeInUp')
       $('.pro-container').addClass('animated fadeInUp')
+    } 
+    if (scroBottom >= $('.about').offset().top) {
+      $('.about-left').addClass('animated fadeInLeft')
+      $('.about-right').addClass('animated fadeInRight')
     }
-    //监听滚动添加动画
-    $(document).scroll(() => {
-      const scroBottom = $(window).scrollTop() + $(window).height();
-      if (scroBottom >= $('.product-container').offset().top) {
-        $('.product-container .in-tit').addClass('animated fadeInUp')
-        $('.pro-container').addClass('animated fadeInUp')
-      } 
-      if (scroBottom >= $('.about').offset().top) {
-        $('.about-left').addClass('animated fadeInLeft')
-        $('.about-right').addClass('animated fadeInRight')
-      }
-      if (scroBottom >= $('.about-bottom').offset().top) {
-        $('.about-bottom').addClass('animated zoomIn')
-      }
-      if (scroBottom >= $('.advantages-content').offset().top) {
-        $('.advantages-tit').addClass('animated fadeInUp')
-        $('.advantages-content ul').addClass('animated fadeInUp')
-      }
-      if (scroBottom >= $('.case-bottom').offset().top) {
-        $('.case-bottom ul').addClass('animated fadeInUp')
-      }
-      if (scroBottom >= $('.news').offset().top) {
-        $('.news .bg strong').addClass('animated fadeInLeft')
-        $('.news .bg .buttonbox').addClass('animated fadeInLeft')
-        $('.news .in-tit').addClass('animated fadeInUp')
-      }
-      if (scroBottom >= $('.news-container').offset().top) {
-        $('.news-content ul').addClass('animated fadeInUp')
-        $('.news .news-content .buttonbox a').addClass('animated fadeInUp')
-      }
-      if (scroBottom >= $('.contact-container').offset().top) {
-        $('.contact-container span').addClass('animated fadeInUp')
-        $('.contact-container em').addClass('animated fadeInUp')
-        $('.contact-content ul').addClass('animated fadeInUp')
-      }
-    })
-    // 产品根据分类显示
-    $('.pro-category li').hover(function () {
-      const index = $(this).index()
-      $(this).siblings().removeClass('active')
-      $('.pro-main ul').eq(index).removeClass('display_none').siblings().addClass('display_none animated pulse')
-    });
-    // 客户案例样式
-    $('.case-content li').hover(function () {
-      $(this).addClass('active').siblings().removeClass('active').find('.layer').removeClass('display_none')
-      $(this).siblings().find('.hover-view').addClass('display_no')
-      $(this).siblings().find('.default-view').removeClass('display_none')
-      $(this).children('.layer').addClass('display_none')
-      $(this).children('.hover-view').removeClass('display_no')
-      $(this).children('.default-view').addClass('display_none')
-    })
+    if (scroBottom >= $('.about-bottom').offset().top) {
+      $('.about-bottom').addClass('animated zoomIn')
+    }
+    if (scroBottom >= $('.advantages-content').offset().top) {
+      $('.advantages-tit').addClass('animated fadeInUp')
+      $('.advantages-content ul').addClass('animated fadeInUp')
+    }
+    if (scroBottom >= $('.case-bottom').offset().top) {
+      $('.case-bottom ul').addClass('animated fadeInUp')
+    }
+    if (scroBottom >= $('.news').offset().top) {
+      $('.news .bg strong').addClass('animated fadeInLeft')
+      $('.news .bg .buttonbox').addClass('animated fadeInLeft')
+      $('.news .in-tit').addClass('animated fadeInUp')
+    }
+    if (scroBottom >= $('.news-container').offset().top) {
+      $('.news-content ul').addClass('animated fadeInUp')
+      $('.news .news-content .buttonbox a').addClass('animated fadeInUp')
+    }
+    if (scroBottom >= $('.contact-container').offset().top) {
+      $('.contact-container span').addClass('animated fadeInUp')
+      $('.contact-container em').addClass('animated fadeInUp')
+      $('.contact-content ul').addClass('animated fadeInUp')
+    }
+  })
   </script>
 </body>
 </html>

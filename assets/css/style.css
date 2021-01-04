@@ -114,6 +114,34 @@ header nav ul li:hover a{
   z-index: 10;
   color:var(--color-high-text) !important;
 }
+header nav ul li ul {
+  display: none;  
+  width: 300%;
+  height: 40px;
+  margin-left: -100px;
+}
+header nav ul li ul li:first-child {
+  border-bottom-left-radius: 20px;
+}
+header nav ul li ul li:last-child {
+  border-bottom-right-radius: 20px;
+}
+header nav ul li ul li{
+  height: 100%;
+  float: left;
+  width: 30%;
+  background-color: #fff;
+  z-index: 999;
+}
+header nav ul li ul li a {
+  height: 100%;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+}
+header nav ul li ul li::after {
+  display: none;
+}
 header .layout-line {
   margin-top: 5px;
   margin-bottom: 2px;
@@ -798,8 +826,181 @@ footer .footer-container {
 footer .footer-container a{
   color: rgb(165, 165, 165);
 }
+
+/* 商品栏 */
+.Ycontainer {
+  max-width: 1200px !important;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+}
+.breadcrumb {
+  width: 100%;
+}
+.breadcrumb ol{
+  padding: 10px;
+}
+.breadcrumb ol li {
+  float: left;
+  margin-right: 30px;
+}
+.breadcrumb span {
+  position: absolute;
+  left: 50px;
+  font-size: 1.1em;
+}
+.breadcrumb ol li a {
+  font-size: 1.1em;
+  color: #333;
+  text-decoration: none;
+}
+.pro-left {
+  text-align: left;
+  width: 17%;
+  position: relative;
+  margin-right: 10px;
+}
+.pro-left span {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  line-height: 55px;
+  background-color: rgb(241, 131, 2);
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+}
+.pro-left ul {
+  width: 100%;
+  margin-top: 55px;
+}
+.pro-left ul li {
+  text-align: center;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 10px;
+}
+.pro-left ul li a {
+  color: #666;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: all .5s;
+  position: relative;
+}
+.pro-left ul li a::after {
+  font-family: "iconfont";
+  content: '\e60e';
+  color: #666;
+  position: absolute;
+  right: -20px;
+  top: 5px;
+  display: none;
+  font-size: 12px;
+}
+.pro-left ul li:hover a{
+  margin-left: 15px;
+  color: red
+}
+.pro-left ul li:hover a::after {
+  display: block;
+}
+.pro-list {
+  float: left;
+  width: 80%;
+}
+.pro-list ul {
+  width: 100%;
+}
+.pro-list ul li {
+  width: 33%;
+  padding: 10px;
+  float: left;
+  margin-bottom: 10px;
+  transition: all .5s;
+}
+.pro-list ul li a {
+  text-decoration: none;
+  transition: all .5s;
+}
+.pro-list ul li img {
+  width: 100%;
+  height: auto;
+}
+.pro-cont {
+  padding-left: 20px;
+  position: relative;
+}
+.pro-cont .cont-tit {
+  width: 80%;
+  font-size: 1.2em;
+  margin: 18px 0;
+  height: 24px;
+  line-height: 24px;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.pro-cont .cont-tit::after {
+  content: '\e64a';
+  font-family: 'iconfont';
+  position: absolute;
+  top: -5px;
+  right: 20px;
+  transform: rotate(90deg);
+  padding: 5px 10px;
+  transition: all .5s;
+  border-bottom: 0px solid #fff;
+}
+.pro-list ul li:hover {
+  transform: translate(0,-3px);
+  background-color: #fd6e27;
+  box-shadow: 5px 5px 3px rgba(145, 145, 146, 0.5);
+}
+.pro-list ul li:hover a {
+  color: #fff;
+}
+.pro-list ul li:hover .cont-tit::after {
+  right: 0;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
 /* 手机端 */
 @media (max-width:789px) {
+  .menu ul li ul li:first-child {
+    border-top: 1px solid #838383;
+  }
+  .menu ul li ul li:last-child {
+    border-bottom:  none;
+  }
+  .sub {
+    position: relative;
+  }
+  .sub:after {
+    font-family: 'iconfont';
+    content: '\e616';
+    display: block;
+    margin-bottom: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+  }
+  .sub.active:after {
+    content: '\e6a6';
+  }
+  .menu ul li ul {
+    display: none;
+  }
+  .menu ul li ul li a{
+    padding-left:50px ;
+  }
   .product {
     background-image: none;
   }
@@ -1014,20 +1215,6 @@ footer .footer-container a{
     border-radius: 10px;
     -webkit-transition: .3s;
     transition: .3s;
-  }
-
-  .menu-button:hover .bar:nth-of-type(1) {
-    -webkit-transform: translateY(1.5px) rotate(-4.5deg);
-    -ms-transform: translateY(1.5px) rotate(-4.5deg);
-    transform: translateY(1.5px) rotate(-4.5deg);
-  }
-  .menu-button:hover .bar:nth-of-type(2) {
-    opacity: .9;
-  }
-  .menu-button:hover .bar:nth-of-type(3) {
-    -webkit-transform: translateY(-1.5px) rotate(4.5deg);
-    -ms-transform: translateY(-1.5px) rotate(4.5deg);
-    transform: translateY(-1.5px) rotate(4.5deg);
   }
   .menu-button.cross .bar:nth-of-type(1) {
     -webkit-transform: translateY(15px) rotate(-45deg);
