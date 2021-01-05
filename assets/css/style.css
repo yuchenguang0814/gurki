@@ -424,8 +424,7 @@ header .layout-line hr{
   color: rgb(255, 255, 255);
 }
 .advantages-container .advantages-tit p strong {
-  font-size: 2.25em;
-  font-weight: 700;
+  color: #fff;
 }
 .advantages-container .advantages-tit p span {
   font-size: 1.25em;
@@ -1054,7 +1053,6 @@ footer .footer-container a{
 .new-list ul li div{
   float: left;
   height: 100%;
-  overflow: hidden;
   margin-left: 20px;
 }
 .new-list ul li div:last-child {
@@ -1091,6 +1089,15 @@ footer .footer-container a{
   display: -webkit-box; 
   -webkit-box-orient: vertical;
 }
+.new-time span:before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 1px;
+  left: 100%;
+  top: 15px;
+  border-bottom: 1px solid #ddd;
+}
 .new-time span:after {
   font-family: "iconfont";
   padding: 10px;
@@ -1107,6 +1114,9 @@ footer .footer-container a{
   background-color: rgb(237, 85, 12);
   color: #fff;
 }
+.new-list ul li:hover .new-time span:before{
+  border-bottom-color: #828281;
+}
 /* 关于我们 */
 .about-container span {
   position: relative;
@@ -1117,27 +1127,50 @@ footer .footer-container a{
 }
 .about-dev ul{
   display: flex;
+  position: relative;
 }
 .about-dev ul li {
   flex: 1;
   text-align: center;
+  position: relative;
+  padding-bottom: 30px;
 }
 .about-dev ul li i {
   color: #fd6e27;
-  font-size: 2em;
+  font-size: 22px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  position: relative;
+  z-index: 2;
+  top: 0;
+  transition: all .5s;
+}
+.about-dev ul li p {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
+.item-icon-active {
+}
+.icon-dingwei:before {
+  font-size: 30px;
 }
 .about-dev ul li p {
   margin-top: 20px;
   font-size: 1.25em;
   color: #666;
 }
+.item-icon-active {
+
+}
 .dev-line {
   border-bottom: 7px solid #eceef0;
   position: absolute;
-  top: 23px;
+  top: 13px;
   box-shadow: 0px -1px 0px #dadcdf;
-  width: calc(75%);
-  left: calc(12.5%);
+  width: calc(74.6%);
+  left: calc(12%);
+  z-index: 1  ;
 }
 /* 手机端 */
 @media (max-width:789px) {

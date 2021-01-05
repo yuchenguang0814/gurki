@@ -157,15 +157,15 @@
               <p class="item-time one-row">2020</p>
             </li>
             <li>
-              <i class="iconfont icon-circleyuanquan item-icon main-color icon-dingwei item-icon-active"></i>
+              <i class="iconfont icon-circleyuanquan item-icon main-color"></i>
               <p class="item-time one-row">2020</p>
             </li>
             <li>
-              <i class="iconfont icon-circleyuanquan item-icon main-color icon-dingwei item-icon-active"></i>
+              <i class="iconfont icon-circleyuanquan item-icon main-color"></i>
               <p class="item-time one-row">2020</p>
             </li>
             <li>
-              <i class="iconfont icon-circleyuanquan item-icon main-color icon-dingwei item-icon-active"></i>
+              <i class="iconfont icon-circleyuanquan item-icon main-color"></i>
               <p class="item-time one-row">2020</p>
             </li>
           </ul>
@@ -193,5 +193,12 @@
   <script src="./assets/share/jquery/1.10.2/jquery.min.js"></script>
   <script src="./assets/share/Swiper/dist/js/swiper.min.js"></script>
   <script src="./assets/js/index.js"> </script>
+  <script>
+    $('.about-dev li').hover(function () {
+      const index = $(this).index()
+      $(this).siblings().find('i').removeClass('icon-dingwei item-icon-active')
+      $(this).find('i').addClass('icon-dingwei item-icon-active')
+    })
+  </script>
 </body>
 </html>
