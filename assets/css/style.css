@@ -910,13 +910,15 @@ footer .footer-container a{
 .pro-list {
   float: left;
   width: 80%;
+  margin: 0 auto;
 }
 .pro-list ul {
   width: 100%;
 }
 .pro-list ul li {
-  width: 33%;
+  width: 31%;
   padding: 10px;
+  margin-right: 10px;
   float: left;
   margin-bottom: 10px;
   transition: all .5s;
@@ -957,6 +959,14 @@ footer .footer-container a{
   transition: all .5s;
   border-bottom: 0px solid #fff;
 }
+.pro-cont .cont-desc {
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
 .pro-list ul li:hover {
   transform: translate(0,-3px);
   background-color: #fd6e27;
@@ -969,6 +979,165 @@ footer .footer-container a{
   right: 0;
   border-bottom: 1px solid #fff;
   color: #fff;
+}
+.bgbanner img{
+  width: 100%;
+}
+/* 客户案例内页 */
+.advantages-tit p {
+  font-size: 2em;
+  font-weight: 700;
+  color: rgb(89, 89, 89);
+  text-align: center;
+}
+.advantages-tit p strong {
+  font-size: 1.1em;
+  margin-right: 20px;
+  font-weight: 700;
+  color: rgb(255, 114, 0);
+}
+.advantages-tit p span {
+  position: relative;
+  left: 0;
+}
+.advantages-tit p:last-child {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.advantags ul {
+  margin-top: 20px;
+}
+.advantags ul li {
+  text-align: center;
+  width: 25%;
+  float: left;
+  overflow: hidden;
+  padding: 10px;
+  color: rgb(127, 127, 127);
+}
+.advantags ul li span {
+  margin-top: 10px;
+  position: relative;
+  left: 0;
+}
+.advantags ul li span p:first-child {
+  font-size: 1.8em;
+}
+.advantags ul li span p:last-child {
+  font-size: 0.8em;
+  color: rgb(165, 165, 165)
+}
+.advantags ul li span:last-child {
+  display: block;
+  margin-top: 20px;
+}
+.advantags ul li div{
+  margin-top: 20px;
+}
+/* 新闻中心 */
+.new-list ul {
+  width: 80%;
+  float: left;
+}
+.new-list ul li{
+  padding: 20px 0;
+  width: 100%;
+  height: 150px;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+}
+.new-list ul li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.new-list ul li div{
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  margin-left: 20px;
+}
+.new-list ul li div:last-child {
+  float: right;
+}
+.new-list ul li .new-content {
+  width: 70%;
+}
+.new-list ul li img{
+  height: 100%;
+  width: auto;
+}
+.new-list span {
+  position: relative;
+  left: 0;
+}
+.new-time span {
+  font-size: 1.6em;
+  color: #999;
+}
+.new-content p {
+  padding-left: 20px;
+  font-size: 1.2em;
+}
+.new-content span {
+  color: #999;
+  padding-left: 20px;
+  display: block;
+  margin-top: 20px;
+  word-break: break-all; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2; 
+  display: -webkit-box; 
+  -webkit-box-orient: vertical;
+}
+.new-time span:after {
+  font-family: "iconfont";
+  padding: 10px;
+  content: '\e64a';
+  color: #999;
+  position: absolute;
+  top: 36px;
+  left: 15px;
+  font-size: 1.2em;
+  transform: rotate(90deg);
+  transition: all .5s;
+}
+.new-list ul li:hover .new-time span:after{
+  background-color: rgb(237, 85, 12);
+  color: #fff;
+}
+/* 关于我们 */
+.about-container span {
+  position: relative;
+  left: 0;
+}
+.about-dev {
+  position: relative;
+}
+.about-dev ul{
+  display: flex;
+}
+.about-dev ul li {
+  flex: 1;
+  text-align: center;
+}
+.about-dev ul li i {
+  color: #fd6e27;
+  font-size: 2em;
+}
+.about-dev ul li p {
+  margin-top: 20px;
+  font-size: 1.25em;
+  color: #666;
+}
+.dev-line {
+  border-bottom: 7px solid #eceef0;
+  position: absolute;
+  top: 23px;
+  box-shadow: 0px -1px 0px #dadcdf;
+  width: calc(75%);
+  left: calc(12.5%);
 }
 /* 手机端 */
 @media (max-width:789px) {
