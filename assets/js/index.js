@@ -24,7 +24,7 @@ $('.in-tit').addClass('animated fadeInUp')
 $('.pro-container').addClass('animated fadeInUp')
 }
 // 导航二级菜单
-$("li:has(ul)").hover(function() {
+$("nav li:has(ul)").hover(function() {
 $(this).find("a:first").css("background-color","#eee")
 $(this).find(".sub").css("display","block")
 },function() {
@@ -32,13 +32,11 @@ $(this).find("a:first").css("background-color","#fff");
 $(this).find(".sub").css("display","none"); 
 })
 //手机导航展开二级菜单
-$('.menu-ul:has(ul)').click(function () {
+$('.menu-ul:has(ul) li').click(function () {
   if ($(this).find(".sub").hasClass('active')) {
-    $(this).find(".sub").css('background-color', '#3c3c3c')
     $(this).find(".sub").removeClass('active')
     $(this).find("ul").slideUp()
   } else {
-    $(this).find(".sub").css('background-color', '#666')
     $(this).find(".sub").addClass('active')
     $(this).find("ul").slideToggle()
   }

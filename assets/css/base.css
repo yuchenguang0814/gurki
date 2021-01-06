@@ -83,7 +83,7 @@ a:link{
 
 @media (max-width:789px) {
   .pc {
-    display: none;
+    display:none!important;
   }
   .wap {
     display: block;
