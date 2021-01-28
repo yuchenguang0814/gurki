@@ -1,0 +1,439 @@
+.about-1.Ycontainer {
+  overflow: inherit;
+  padding: 0 2em;
+}
+.tl-content img {
+  width: 100%;
+}
+#nav {
+  display: block;
+  position: relative;
+  box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
+}
+#nav ul {
+  width: 100%;
+}
+#nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+#nav ul li {
+  flex: 1;
+  background: rgb(238, 239, 240) linear-gradient(hsla(0, 0%, 100%, .2), transparent);
+  text-align: center;
+  height: 5em;
+  font-size: inherit;
+  position: relative;
+  transition: all 0.5s;
+  color: #2a2a2a;
+}
+#nav ul li:first-child {
+  min-width: 22%;
+  height: 10em;
+  position: absolute;
+  bottom: 0;
+  background: #b10000 linear-gradient(hsla(0, 0%, 100%, .2), transparent);
+  padding: 3em 2% 2em 2%;
+}
+#nav ul li:first-child hr {
+  width: 35px;
+  height: 5px;
+  background: #fff;
+  border: none;
+  margin: 0 0 10px;
+}
+#nav ul li:first-child span {
+  color: #fff;
+  font-size: 120%;
+  text-transform: uppercase;
+  display: block;
+  background: url(../images/fkh.png) 90% bottom no-repeat;
+  text-align: left;
+  transition: all .5s;
+}
+#nav ul li:first-child p {
+  color: #fff;
+  font-size: 120%;
+  text-align: left;
+}
+#nav ul li:nth-child(2) {
+  margin-left: 22%;
+}
+#nav ul li a {
+  display: block;
+  font-size: 1.2em;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  height: 100%;
+  padding-top: 1.2em;
+  color: inherit;
+}
+#nav ul li a::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 3em;
+  height: .3em;
+  background: #b10000;
+  bottom: 0;
+  left: 50%;
+  transition: all .5s;
+  transform: translateX(-50%) scale(0);
+}
+#nav ul li:hover a::after{
+  transform: translateX(-50%) scale(1);
+}
+#nav ul li:hover{
+  background: #ff6e6e;
+  color: #fff;
+}
+#nav ul li:first-child:hover {
+  background: #b10000 linear-gradient(hsla(0, 0%, 100%, .2), transparent);
+}
+#nav ul li.active{
+  background: #ff6e6e;
+  color: #fff;
+}
+#nav ul li.active a::after {
+  transform: translateX(-50%) scale(1);
+}
+#nav ul:hover li:first-child span {
+  background-position: 95% bottom;
+}
+.about-1 .mian {
+  padding: 2em 0;
+  overflow: hidden;
+}
+.ass h4 {
+  color: #b10000;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.ass p {
+  font-size: 1.2em;
+  color: #000000;
+}
+.ass .cshu {
+  margin: 1.5em 0;
+}
+.ass .cshu li {
+  width: 25%;
+  box-sizing: border-box;
+  float: left;
+  padding-left: 4%;
+}
+.ass .cshu li h6 {
+  position: relative;
+  font-size: 3em;
+  color: #bb0001;
+}
+.ass .cshu li p {
+  color: #1f1f1f;
+  margin-top: .8em;
+}
+.ass .cshu li h6 i {
+  position: absolute;
+  top: 0;
+  font-style: normal;
+  font-size: .5em;
+  color: #1f1f1f;
+}
+.app {
+  width: 100%;
+  box-sizing: border-box;
+  border: .45em solid #ddd;
+  margin-top: 1.2em;
+  max-height: 400px;
+  overflow: hidden;
+}
+.app img {
+  width: 100%;
+  transform: translateY(-20%);
+}
+.a2 {
+  margin-top: 1.8em;
+}
+.a2 p {
+  font-size: 1.2em;
+  color: #000000;
+}
+.a2 p span {
+  color: #b10000;
+}
+.mj{ width:100%;margin:0 auto; font-size: inherit;}
+.mj .zi{ float:right; width:50%;margin-top:4em; font-size: inherit;}
+.mj .tu{ float:left; width:49%; padding: 5em;}
+.mj1{ width:100%;margin:0 auto;margin-top:0em;}
+.mj1 .zi01{ float:left; width:48%;margin-top:2em;}
+.kd ul li{
+  line-height: 2;
+  font-size: 1.25em;
+}
+.kd ul li strong {
+  font-size: 2rem;
+  color: #b10000;
+  font-weight: 700;
+}
+.zi strong.nomal {
+  color: #666;
+  font-size: 1.6em
+}
+.zi span {
+  text-align: justify;
+  font-size: inherit;
+}
+.mj .zi li {
+  list-style-type:disc;
+  color: #666;
+}
+.mj1 li{
+  list-style-type:disc;
+  color: #666;
+  margin-left: 2em;
+}
+.kd .honor ul li {
+  width: 23%;
+  float: left;
+  margin-right: 15px;
+  position: relative;
+  padding-bottom: 50px;
+  margin-bottom: 10px;
+}
+.kd .honor ul li span {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  line-height: 50px;
+  border-bottom: 3px solid #efefef;
+  background-color: #fff;
+  position: absolute;
+}
+.kd .honor-img {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+.kd .honor ul li img {
+  width: 100%;
+  height: auto;
+  transition: all .3s;
+}
+.kd .honor ul li::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: rgb(255, 114, 0);
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.kd .honor ul li:hover img {
+  transform: scale(1.1)
+}
+.kd .honor ul li:hover::after{
+  width: 100%;
+}
+.kd .honor ul li:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: 0.6s;
+}
+.kd .honor ul li:hover span {
+  border-top: 3px solid #efefef;
+}
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 10px;
+  /* padding-bottom: 40px; */
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  background-color: black;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+.tlcontainer {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+.tlcontainer h2 {
+  font-size: 2em;
+  color: #b10000;
+  font-weight: bold;
+}
+.tlcontainer p {
+  font-size: 1.25em;
+  color: #666;
+}
+.tlcontainer::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -8px;
+  background-color: #990100;
+  border: 4px solid #990100;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.tl-left {
+  left: 0;
+  text-align: right;
+}
+.tl-left:before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #E9E9E9;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #E9E9E9;
+}
+.tl-right {
+  left: 50%;
+  text-align: left;
+}
+.tl-right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #E9E9E9;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #E9E9E9 transparent transparent;
+}
+.tl-right::after {
+  left: -12px;
+}
+.tl-content {
+  padding: 20px 30px;
+  background-color: #E9E9E9;
+  position: relative;
+  border-radius: 6px;
+}
+.content-block {
+  vertical-align: middle;
+  padding: 20px 30px;
+  background-color: #bababa;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 5px 10px #8b8b8b;
+}
+.content-block h3 {
+  text-align: center;
+  font-size: 20px;
+  color: #261919;
+}
+.about-item {
+  animation-duration: 2s;
+}
+@media (max-width:1100px) {
+  #nav ul {
+    font-size: 12px;
+  }
+  .about-1.Ycontainer {
+    width: 100%;
+    padding: 0 1em;
+  }
+}
+@media (max-width:900px) {
+  #nav ul li:first-child {
+    display: none;
+  }
+  #nav ul li:nth-child(2) {
+    margin: 0;
+  }
+  #nav ul {
+    font-size: 10px;
+  }
+  HTML, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, pre, form, fieldset, table, th, td {
+    font-size: 12px;
+  }
+  .ass .cshu li {
+    font-size: 12px;
+  }
+  .app img {
+    transform: translateY(0);
+}
+.kd ul li strong {
+  font-size: 1.2em;
+}
+.zi strong.nomal {
+  color: #666;
+  font-size: 1.2em;
+}
+.mj1 li {
+  margin-left: 0;
+}
+.kd .honor ul li {
+  width: 40%;
+  margin-left: .8em;
+}
+  /* 发展历史 */
+  .timeline {
+    padding-bottom: 20px;
+  }
+  .timeline::after {
+    display: none;
+  }
+  .tlcontainer {
+    width: 100%;
+  }
+  .tlcontainer::after {
+    display: none;
+  }
+  .tlcontainer::before {
+    display: none;
+  }
+  .tl-right {
+    left: 0;
+  }
+  .content-block {
+    margin: 20px 30px;
+    padding: 15px 0;
+  }
+  .tl-left {
+    text-align: left;
+  }
+  .kd .honor ul li {
+    padding-bottom: 30px;
+  }
+  .kd .honor ul li span {
+    height: 30px;
+    line-height: 30px;
+  }
+  .mj .tu {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px){
+  .mj .zi{ float:none; width:100%;margin-top:1em}
+  .mj .tu{ float:none; width:100%;margin-top:1em}
+  .mj1 .zi01{ float:none; width:100%;margin-top:0em}
+  .ass .cshu li h6 {
+    font-size: 2.5em;
+  }
+  }

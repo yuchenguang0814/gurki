@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="applicable-device" content="pc,mobile">
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/share/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/share/Swiper/dist/css/swiper.min.css">
+  <link rel="stylesheet" href="./assets/share/animate/animate.min.css">
+  <link rel="stylesheet" href="./assets/iconfont/iconfont.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <style>
+  .video {
+    padding: 20px;
+  }
+  .list_video {
+    margin: -10px -8px
+  }
+  .list_video .vid_img {
+    width: 298px;
+    height: 168px;
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    display: block;
+    transition: all .5s;
+  }
+  .list_video li {
+      width: 100%;
+      float: left;
+      padding: 10px 8px;
+      position: relative;
+  }
+
+  .list_video li a {
+      background: #f0f3fa;
+      padding: 40px 35px;
+      display: block;
+      overflow: hidden;
+      box-shadow: 1px 1px 30px #eee;
+      line-height: 1.5;
+      color: #788291;
+      transition: all .5s;
+      text-decoration: none;
+  }
+
+  .list_video li .date img {
+      height: 15px;
+      width: auto;
+      margin-right: 5px;
+      margin-top: -3px;
+      vertical-align: middle
+  }
+  .list_video li span {
+      position: relative;
+      left: 0;
+      top: 0;
+      font-size: 20px;
+      color: #05163f;
+      margin: 30px 0;
+      display: block;
+      overflow: hidden;
+      font-weight: bold;
+      line-height: 30px;
+      height: 60px;
+      transition: all .5s
+  }
+
+  .list_video li em {
+      font-size: 16px
+  }
+
+  .list_video li:hover a {
+      box-shadow: 4px 4px 20px 5px rgba(0, 0, 0, 0.13);
+      transform: translate(0, -3px)
+  }
+  .list_video li:hover .vid_img {
+    transform: translate(0, -3px)
+  }
+
+  .list_video li:hover span {
+      color: #e61e37
+  }
+
+  .list_video:after {
+      width: 100%;
+      clear: both;
+      line-height: 0;
+      display: block;
+      overflow: hidden;
+      zoom: 1;
+      font-size: 0;
+      content: '.'
+  }
+  @media (max-width:789px) {
+    .list_video .vid_img {
+      width: 100px;
+      height: 56px;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      display: block;
+    }
+    .list_video {
+        margin: -5px
+    }
+
+    .list_video li {
+        padding: 5px
+    }
+
+    .list_video li a {
+        padding: 10px
+    }
+
+    .list_video li .date {
+        font-size: 12px
+    }
+
+    .list_video li .date img {
+        height: 12px;
+        margin-right: 3px;
+        margin-top: -3px
+    }
+
+    .list_video li span {
+        font-size: 16px;
+        margin: 5px 0;
+        line-height: 24px;
+        height: 48px
+    }
+
+    .list_video li em {
+        font-size: 12px
+    }
+  }
+  </style>
+</head>
+<body>
+  <!-- 手机导航栏 -->
+  <div class="head-nav wap">
+    <div class="logo">
+      <img src="./assets/images/logo.png" alt="">
+    </div>
+    <div class="menu-button">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+  <div class="menu wap">
+    <ul class="menu-ul">
+      <li class="active"><a href="./index.html">首页</a></li>
+      <li><a href="javascript:void(0)" class="sub">产品中心</a>
+        <ul>
+          <li><a href="./products.html">给袋式包装机（单机）</a></li>
+          <li><a href="./products.html">给袋式包装机系列</a></li>
+          <li><a href="./products.html">给袋式真空包装机</a></li>
+          <li><a href="./products.html">酱腌菜包装机系列</a></li>
+          <li><a href="./products.html">料理包装机系列</a></li>
+          <li><a href="./products.html">全自动立式包装机</a></li>
+          <li><a href="./products.html">口罩机</a></li>
+          <li><a href="./products.html">配套设备系列</a></li>
+          <li><a href="./products.html">给袋式其他设备</a></li>
+        </ul>
+      </li>
+      <li><a href="./advantags.html">客户案例</a></li>
+      <li>
+        <a href="javascript:void(0)" class="sub">新闻中心</a>
+          <ul>
+            <li><a href="./news.html">公司动态</a></li>
+            <li><a href="./news.html">行业新闻</a></li>
+            <li><a href="./news.html">客户案例</a></li>
+          </ul>
+      </li>
+      <li><a href="./about.html">关于我们</a></li>
+      <li><a href="./content.html">联系我们</a></li>
+    </ul>
+  </div>
+  <!-- 手机导航栏结束 -->
+  <div class="line_height50 wap"></div>
+  <!-- 顶部导航栏 -->
+  <header class="pc">
+    <!-- 顶部 -->
+    <div class="top container-fluid">
+      <div class="row">
+        <div class="topLeft col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <p><span>欢迎访问润立机械</span></p>
+        </div>
+        <div class="topRight col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <p>
+            <span>&nbsp;客服热线：</span>
+            <span>
+              <strong>180 6630 2765</strong>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- 导航栏 -->
+    <div class="bottom container-fluid">
+      <div class="row">
+        <!-- logo -->
+        <div class="logo col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <img src="./assets/images/logo.png" alt="logo">
+        </div>
+        <!-- 导航 -->
+        <nav class="nav">
+          <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <ul>
+              <li class="active"><a href="./index.html">首页</a></li>
+              <li><a href="./products.html">产品中心</a>
+                <ul class="sub">
+                  <li><a href="./products.html">给袋式包装机（单机）</a></li>
+                  <li><a href="./products.html">给袋式包装机系列</a></li>
+                  <li><a href="./products.html">给袋式真空包装机</a></li>
+                  <li><a href="./products.html">酱腌菜包装机系列</a></li>
+                  <li><a href="./products.html">料理包装机系列</a></li>
+                  <li><a href="./products.html">全自动立式包装机</a></li>
+                  <li><a href="./products.html">口罩机</a></li>
+                  <li><a href="./products.html">配套设备系列</a></li>
+                  <li><a href="./products.html">给袋式其他设备</a></li>
+                </ul>
+              </li>
+              <li><a href="./advantags.html">客户案例</a></li>
+              <li>
+                <a href="./news.html">新闻中心</a>
+                  <ul class="sub">
+                    <li><a href="./news.html">公司动态</a></li>
+                    <li><a href="./news.html">行业新闻</a></li>
+                    <li><a href="./news.html">客户案例</a></li>
+                  </ul>
+              </li>
+              <li><a href="./about.html">关于我们</a></li>
+              <li><a href="./content.html">联系我们</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- 底部线条 -->
+    <div class="layout-line">
+      <hr class="hr">
+    </div>
+  </header>
+  <!-- 顶部导航栏结束 -->
+  <!-- 内容栏 -->
+  <div class="bgbanner">
+    <img src="http://www.rarljx.com/images/video_banner.jpg" alt="">
+  </div>
+  <div class="breadcrumb">
+    <div class="Ycontainer">
+      <!-- 面包屑导航 -->
+      <ol class="clear-fix">
+        <li><a href="./index.html">首页</a></li>
+        <span>></span>
+        <li><a href="./about.html">视频中心</a></li>
+      </ol>
+      <!-- 面包屑导航结束 -->
+      <!-- 视频中心 -->
+      <div class="video">
+        <ul class="list_video">
+          <li>
+            <a>
+              <div class="date">
+                <img src="./assets/images/time.png"/>发布时间：2021-1-25
+              </div>
+              <span>测试视频标题1</span><em>了解更多+</em>
+              </a>
+              <img src="http://www.rarljx.com/images/news.jpg" class="vid_img">
+          </li>
+          <li>
+            <a>
+              <div class="date">
+                <img src="./assets/images/time.png"/>发布时间：2021-1-25
+              </div>
+              <span>测试视频标题1</span><em>了解更多+</em>
+              </a>
+              <img src="http://www.rarljx.com/images/news.jpg" class="vid_img">
+          </li>
+          <li>
+            <a>
+              <div class="date">
+                <img src="./assets/images/time.png"/>发布时间：2021-1-25
+              </div>
+              <span>测试视频标题1</span><em>了解更多+</em>
+              </a>
+              <img src="http://www.rarljx.com/images/news.jpg" class="vid_img">
+          </li>
+        </ul>
+      </div>
+      <!-- 视频中心结束 -->
+    </div>
+  </div>
+  <!-- 内容结束 -->
+  <!-- 底部页脚 -->
+  <footer>
+    <div class="footer-container">
+      <p><span>Copyright @ GURKI All Rights Reserved&nbsp; <a>网站地图</a></span></p>
+    </div>
+  </footer>
+  <!-- 底部页脚结束 -->
+  <!-- 手机底部导航 -->
+  <div class="foot-nav wap">
+    <ul>
+      <li><a href="tel:18968919292"><span class="icon iconfont icon-dianhua-moren"></span></a></li>
+      <li><a href="#"><span class="icon iconfont icon-zhiding-moren"></span></a></li>
+      <li><a href="#"><span class="icon iconfont icon-shouye-xuanzhong"></span></a></li>
+    </ul>
+  </div>
+  <!-- 手机底部导航结束 -->
+  <script src="./assets/share/jquery/1.10.2/jquery.min.js"></script>
+  <script src="./assets/share/Swiper/dist/js/swiper.min.js"></script>
+  <script src="./assets/js/index.js"> </script>
+</body>
+</html>

@@ -116,6 +116,7 @@ header nav ul li:hover a{
 header nav ul li ul {
   display: none;
   width: 100%;
+  height: auto;
 }
 header nav ul li ul li:last-child {
   border-bottom-right-radius: 20px;
@@ -124,6 +125,7 @@ header nav ul li ul li:last-child {
 header nav ul li ul li{
   background-color: #fff;
   z-index: 999;
+  min-width: 165px;
 }
 header nav ul li ul li:hover {
   background-color: #ddd;
@@ -487,6 +489,7 @@ header .layout-line hr{
 }
 .case-content ul li{
   background: right top no-repeat;
+  background-size: 100%;
   width: 30%;
   position: relative;
   overflow: hidden;
@@ -586,7 +589,7 @@ header .layout-line hr{
   height: 250px;
   background-color: transparent;
   background-image: url(../images/bg4.jpg);
-  background-size: auto;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-Attachment: scroll;
@@ -826,6 +829,8 @@ header .layout-line hr{
 /* 底部页脚 */
 footer {
   background-color: rgb(22, 18, 15);
+  height:50px;
+  padding-top: 15px;
 }
 footer .footer-container {
   max-width: 1200px;
@@ -892,6 +897,15 @@ footer .footer-container a{
   border-right: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
   padding: 10px;
+  position: relative;
+}
+.pro-left ul li.active ::before{
+  display: block;
+  content: '';
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  background-color:rgb(241, 131, 2);
 }
 .pro-left ul li a {
   color: #666;
@@ -990,9 +1004,7 @@ footer .footer-container a{
   border-bottom: 1px solid #fff;
   color: #fff;
 }
-.bgbanner img{
-  width: 100%;
-}
+
 /* 客户案例内页 */
 .Ycontainer .advantages-tit p {
   font-size: 2em;
@@ -1171,6 +1183,62 @@ footer .footer-container a{
   font-size: 1.25em;
   color: #666;
 }
+.kd .honor {
+  margin-top: 30px;
+  padding: 0 10px;
+}
+.abouts .honor ul li {
+  width: 23%;
+  float: left;
+  margin-right: 15px;
+  position: relative;
+  padding-bottom: 50px;
+}
+.abouts .honor ul li span {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  line-height: 50px;
+  border-bottom: 3px solid #efefef;
+  background-color: #fff;
+}
+.abouts .honor-img {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+.abouts .honor ul li img {
+  width: 100%;
+  height: auto;
+  transition: all .3s;
+}
+.abouts .honor ul li::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: rgb(255, 114, 0);
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.abouts .honor ul li:hover img {
+  transform: scale(1.1)
+}
+.abouts .honor ul li:hover::after{
+  width: 100%;
+}
+.abouts .honor ul li:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: 0.6s;
+}
+.abouts .honor ul li:hover span {
+  border-top: 3px solid #efefef;
+}
 .dev-line {
   border-bottom: 7px solid #eceef0;
   position: absolute;
@@ -1291,12 +1359,14 @@ footer .footer-container a{
 .new .new-content {
   padding: 10px 20px;
   border-bottom: 1px solid #e5e5e5;
+  min-height: 600px;
 }
-.new .pre-next {
+.pre-next {
+  margin-top: 10px;
   padding: 5px 15px;
   padding-left: 10px;
 }
-.new .pre-next a {
+.pre-next a {
   text-decoration: none;
   float: left;
   display: inline-block;
@@ -1308,13 +1378,130 @@ footer .footer-container a{
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.new .pre-next .next {
+.pre-next .next {
   float: right;
+}
+/* 商品详情 */
+.pro-content {
+  float: left;
+  width: 80%;
+  margin: 0 auto;
+}
+.pro-content .pro-cont-top {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(241, 131, 2);
+}
+.pro-content .pro-cont-top span {
+  position: relative;
+  height: 55px;
+  line-height: 55px;
+  color: #fff;
+  font-size: 1.5em;
+  text-align: left;
+}
+.pro-content .pro-cont-desc {
+  margin-top: 10px;
+  text-align: center;
+}
+.pro-content .pro-cont-desc h3 {
+  font-weight: bold;
+  white-space: normal;
+  color: #000;
+  font-size: 2em;
+  line-height: 1.1em;
+  padding: 10px;
+}
+.pro-content .pro-cont-img {
+  margin: 0 auto;
+  position:relative;
+}
+.pro-cont-item .pro-item-desc table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 99%;
+  background-color: white;
+}
+.pro-cont-item .pro-item-desc table td{
+  line-height: 32px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+.pro-cont-item .pro-item-desc table td span {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.pro-cont-item .pro-item-desc table tr:nth-child(2n) {
+  background-color: #eee;
+}
+.pro-content .pro-cont-img img{
+  height: auto;
+}
+.pro-content .pro-cont-desccont{
+  flex: 1;
+}
+.pro-content .pro-cont-desccont h3 {
+  font-weight: bold;
+  white-space: normal;
+  text-align: left;
+  color: #000;
+  font-size: 2em;
+  line-height: 1.1em;
+}
+.pro-content .pro-cont-desccont span {
+  position: relative;
+  left: 0;
+  top: 5px;
+  line-height: 30px;
+  color: #595959;
+}
+.pro-content {
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 20px;
+}
+.pro-content .pro-cont-item {
+  margin-top: 60px;
+  border-top: 1px solid #d9d9d9;
+}
+.pro-cont-item .pro-item-btn {
+  height: 35px;
+  width: 100px;
+  background-color: rgb(241, 131, 2);
+  margin-top: -35px;
+}
+.pro-cont-item .pro-item-btn span {
+  position: relative;
+  left: 0;
+  line-height: 35px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-align: center;
+  color: #fff;
+}
+.pro-cont-item .pro-item-desc {
+  padding-top: 20px;
+}
+.pro-cont-item .pro-item-desc {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 35px;
+  font-size: 14px;
+  color: #595959;
 }
 /* 手机端 */
 @media (max-width:789px) {
   footer {
-    margin-bottom: 50px;
+    padding-top: 0;
+    height: 80px;
   }
   .menu ul li ul li:first-child {
     border-top: 1px solid #838383;
@@ -1768,4 +1955,52 @@ footer .footer-container a{
   .breadcrumb {
     margin: 0;
   }
+  /* 商品详情 */
+  .pro-content {
+    width: 100%;
+  }
+  .pro-content .pro-cont-desc {
+    display: block;
+  }
+  .pro-content .pro-cont-desc .pro-cont-img {
+    width: 100%;
+    height: 100%;
+  }
+  .honor {
+    padding: 0;
+  }
+  .honor ul li {
+    width: 44%;
+  }
+}
+.bgbanner img {
+  width: 100%;
+}
+.left-cont {
+  position: relative;
+  margin-top: 1em;
+  padding-top: 60px;
+  
+}
+.left-cont p {
+  line-height: 2;
+  font-size: .95em;
+  padding: .1em;
+}
+.left-cont img {
+  display: block;
+  margin: 0 auto;
+}
+.left-cont p:last-child {
+  text-align: center;
+  color: red;
+}
+.left-cont {
+  border: 1px solid #e5e5e5
+}
+.pro-left {
+  width: 22%;
+}
+.pro-content ,.pro-list,.new-list ul{
+  width: 75%;
 }

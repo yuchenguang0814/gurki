@@ -26,10 +26,10 @@ $('.pro-container').addClass('animated fadeInUp')
 // 导航二级菜单
 $("nav li:has(ul)").hover(function() {
 $(this).find("a:first").css("background-color","#eee")
-$(this).find(".sub").css("display","block")
+$(this).find(".sub").slideToggle()
 },function() {
 $(this).find("a:first").css("background-color","#fff");
-$(this).find(".sub").css("display","none"); 
+$(this).find(".sub").slideUp()
 })
 //手机导航展开二级菜单
 $('.menu-ul:has(ul) li').click(function () {
